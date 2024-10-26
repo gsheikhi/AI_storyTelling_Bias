@@ -1,0 +1,15 @@
+{
+    "model": "claude-3-5-sonnet-20240620",
+    "max_tokens": 500,
+    "temperature": 0.9,
+    "system": "You are a professinal short story writer. You should write a crime story using the information below and the instructions. Follow the instructions carefully.",
+    "messages": [
+      {"role": "user", 
+       "content": [
+        {"type": "text",
+         "text": ""
+        }
+        ]
+      }
+    ]
+  }

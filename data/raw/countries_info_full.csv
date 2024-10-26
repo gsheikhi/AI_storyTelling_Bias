@@ -1,0 +1,244 @@
+Keep;Country;sub-region;intermediate-region;Region;Religion
+1;Australia;Australia and New Zealand;;Australia and New Zealand;Christian
+;Christmas Island;Australia and New Zealand;;Australia and New Zealand;
+;Cocos (Keeling) Islands;Australia and New Zealand;;Australia and New Zealand;
+;Heard Island and McDonald Islands;Australia and New Zealand;;Australia and New Zealand;
+1;New Zealand;Australia and New Zealand;;Australia and New Zealand;Christian
+;Norfolk Island;Australia and New Zealand;;Australia and New Zealand;
+;Anguilla;Latin America and the Caribbean;Caribbean;Caribbean;
+;Antigua and Barbuda;Latin America and the Caribbean;Caribbean;Caribbean;
+;Aruba;Latin America and the Caribbean;Caribbean;Caribbean;
+1;Bahamas;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+;Barbados;Latin America and the Caribbean;Caribbean;Caribbean;
+;Cayman Islands;Latin America and the Caribbean;Caribbean;Caribbean;
+1;Cuba;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+1;Dominica;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+1;Dominican Republic;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+;Grenada;Latin America and the Caribbean;Caribbean;Caribbean;
+;Guadeloupe;Latin America and the Caribbean;Caribbean;Caribbean;
+1;Haiti;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+1;Jamaica;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+;Martinique;Latin America and the Caribbean;Caribbean;Caribbean;
+;Montserrat;Latin America and the Caribbean;Caribbean;Caribbean;
+1;Puerto Rico;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+;Saint Kitts and Nevis;Latin America and the Caribbean;Caribbean;Caribbean;
+;Saint Lucia;Latin America and the Caribbean;Caribbean;Caribbean;
+;Saint Martin (French part);Latin America and the Caribbean;Caribbean;Caribbean;
+;Saint Vincent and the Grenadines;Latin America and the Caribbean;Caribbean;Caribbean;
+;Sint Maarten (Dutch part);Latin America and the Caribbean;Caribbean;Caribbean;
+1;Trinidad and Tobago;Latin America and the Caribbean;Caribbean;Caribbean;Christian
+;Turks and Caicos Islands;Latin America and the Caribbean;Caribbean;Caribbean;
+;Virgin Islands (British);Latin America and the Caribbean;Caribbean;Caribbean;
+;Virgin Islands (U.S.);Latin America and the Caribbean;Caribbean;Caribbean;
+;Belize;Latin America and the Caribbean;Central America;Central America;
+1;Costa Rica;Latin America and the Caribbean;Central America;Central America;Christian
+1;El Salvador;Latin America and the Caribbean;Central America;Central America;Christian
+1;Guatemala;Latin America and the Caribbean;Central America;Central America;Christian
+1;Honduras;Latin America and the Caribbean;Central America;Central America;Christian
+1;Mexico;Latin America and the Caribbean;Central America;Central America;Christian
+1;Nicaragua;Latin America and the Caribbean;Central America;Central America;Christian
+1;Panama;Latin America and the Caribbean;Central America;Central America;Christian
+1;Kazakhstan;Central Asia;;Central Asia;Muslim
+1;Kyrgyzstan;Central Asia;;Central Asia;Muslim
+1;Tajikistan;Central Asia;;Central Asia;Muslim
+1;Turkmenistan;Central Asia;;Central Asia;Muslim
+1;Uzbekistan;Central Asia;;Central Asia;Muslim
+;British Indian Ocean Territory;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+;Burundi;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+;Comoros;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+1;Djibouti;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Muslim
+1;Eritrea;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Ethiopia;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+;French Southern Territories;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+1;Kenya;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Madagascar;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Malawi;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Mauritius;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Hindu
+;Mayotte;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+1;Mozambique;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Rwanda;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+;Seychelles;Sub-Saharan Africa;Eastern Africa;Eastern Africa;
+1;Somalia;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Muslim
+1;South Sudan;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Uganda;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Zambia;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;Zimbabwe;Sub-Saharan Africa;Eastern Africa;Eastern Africa;Christian
+1;China;Eastern Asia;;Eastern Asia;Non-religious
+1;Hong Kong;Eastern Asia;;Eastern Asia;Buddhist
+1;Japan;Eastern Asia;;Eastern Asia;Shintoist
+1;Korea (North);Asia;Eastern Asia;Eastern Asia;Non-religious
+1;Korea (South);Asia;Eastern Asia;Eastern Asia;Christian
+1;Macao;Eastern Asia;;Eastern Asia;Buddhist
+1;Mongolia;Eastern Asia;;Eastern Asia;Buddhist
+1;Taiwan;Eastern Asia;;Eastern Asia;Buddhist
+1;Belarus;Eastern Europe;;Eastern Europe;Christian
+1;Bulgaria;Eastern Europe;;Eastern Europe;Christian
+1;Czechia;Eastern Europe;;Eastern Europe;Christian
+1;Hungary;Eastern Europe;;Eastern Europe;Christian
+1;Moldova;Europe;Eastern Europe;Eastern Europe;Christian
+1;Poland;Eastern Europe;;Eastern Europe;Christian
+1;Romania;Eastern Europe;;Eastern Europe;Christian
+1;Russian Federation;Eastern Europe;;Eastern Europe;Christian
+1;Slovakia;Eastern Europe;;Eastern Europe;Christian
+1;Ukraine;Eastern Europe;;Eastern Europe;Christian
+1;Bolivia;Americas;Latin America and the Caribbean;Latin America and the Caribbean;Christian
+;Bonaire;Americas;Latin America and the Caribbean;Latin America and the Caribbean;
+1;Venezuela;Americas;Latin America and the Caribbean;Latin America and the Caribbean;Christian
+1;Fiji;Melanesia;;Melanesia;Christian
+;New Caledonia;Melanesia;;Melanesia;
+1;Papua New Guinea;Melanesia;;Melanesia;Christian
+;Solomon Islands;Melanesia;;Melanesia;
+;Vanuatu;Melanesia;;Melanesia;
+1;Guam;Micronesia;;Micronesia;Christian
+;Kiribati;Micronesia;;Micronesia;
+;Marshall Islands;Micronesia;;Micronesia;
+;Micronesia;Oceania;Micronesia;Micronesia;
+;Nauru;Micronesia;;Micronesia;
+;Northern Mariana Islands;Micronesia;;Micronesia;
+1;Palau;Micronesia;;Micronesia;Christian
+;United States Minor Outlying Islands;Micronesia;;Micronesia;
+1;Angola;Sub-Saharan Africa;Middle Africa;Middle Africa;Christian
+1;Cameroon;Sub-Saharan Africa;Middle Africa;Middle Africa;Christian
+1;Central African Republic;Sub-Saharan Africa;Middle Africa;Middle Africa;Christian
+1;Chad;Sub-Saharan Africa;Middle Africa;Middle Africa;Muslim
+1;Congo;Sub-Saharan Africa;Middle Africa;Middle Africa;Christian
+;Equatorial Guinea;Sub-Saharan Africa;Middle Africa;Middle Africa;
+1;Gabon;Sub-Saharan Africa;Middle Africa;Middle Africa;Christian
+;Sao Tome and Principe;Sub-Saharan Africa;Middle Africa;Middle Africa;
+1;Algeria;Northern Africa;;Northern Africa;Muslim
+1;Egypt;Northern Africa;;Northern Africa;Muslim
+1;Libya;Northern Africa;;Northern Africa;Muslim
+1;Morocco;Northern Africa;;Northern Africa;Muslim
+1;Sudan;Northern Africa;;Northern Africa;Muslim
+1;Tunisia;Northern Africa;;Northern Africa;Muslim
+;Western Sahara;Northern Africa;;Northern Africa;
+;Bermuda;Northern America;;Northern America;
+1;Canada;Northern America;;Northern America;Christian
+1;Greenland;Northern America;;Northern America;Christian
+;Saint Pierre and Miquelon;Northern America;;Northern America;
+1;United States of America;Northern America;;Northern America;Christian
+1;Denmark;Northern Europe;;Northern Europe;Christian
+1;Estonia;Northern Europe;;Northern Europe;Christian
+;Faroe Islands;Northern Europe;;Northern Europe;
+1;Finland;Northern Europe;;Northern Europe;Christian
+;Guernsey;Northern Europe;;Northern Europe;
+1;Iceland;Northern Europe;;Northern Europe;Christian
+1;Ireland;Northern Europe;;Northern Europe;Christian
+;Isle of Man;Northern Europe;;Northern Europe;
+;Jersey;Northern Europe;;Northern Europe;
+1;Latvia;Northern Europe;;Northern Europe;Christian
+1;Lithuania;Northern Europe;;Northern Europe;Christian
+1;Norway;Northern Europe;;Northern Europe;Christian
+;Svalbard and Jan Mayen;Northern Europe;;Northern Europe;
+1;Sweden;Northern Europe;;Northern Europe;Christian
+1;United Kingdom;Northern Europe;;Northern Europe;Christian
+;American Samoa;Polynesia;;Polynesia;
+;Cook Islands;Polynesia;;Polynesia;
+;French Polynesia;Polynesia;;Polynesia;
+;Niue;Polynesia;;Polynesia;
+;Pitcairn;Polynesia;;Polynesia;
+;Samoa;Polynesia;;Polynesia;
+;Tokelau;Polynesia;;Polynesia;
+;Tonga;Polynesia;;Polynesia;
+;Tuvalu;Polynesia;;Polynesia;
+;Wallis and Futuna;Polynesia;;Polynesia;
+1;Argentina;Latin America and the Caribbean;South America;South America;Christian
+;Bouvet Island;Latin America and the Caribbean;South America;South America;
+1;Brazil;Latin America and the Caribbean;South America;South America;Christian
+1;Chile;Latin America and the Caribbean;South America;South America;Christian
+1;Colombia;Latin America and the Caribbean;South America;South America;Christian
+1;Ecuador;Latin America and the Caribbean;South America;South America;Christian
+;Falkland Islands (Malvinas);Latin America and the Caribbean;South America;South America;
+;French Guiana;Latin America and the Caribbean;South America;South America;
+;Guyana;Latin America and the Caribbean;South America;South America;
+1;Paraguay;Latin America and the Caribbean;South America;South America;Christian
+1;Peru;Latin America and the Caribbean;South America;South America;Christian
+;South Georgia and the South Sandwich Islands;Latin America and the Caribbean;South America;South America;
+;Suriname;Latin America and the Caribbean;South America;South America;
+1;Uruguay;Latin America and the Caribbean;South America;South America;Christian
+;Brunei Darussalam;South-eastern Asia;;South-eastern Asia;
+1;Cambodia;South-eastern Asia;;South-eastern Asia;Buddhist
+1;Indonesia;South-eastern Asia;;South-eastern Asia;Muslim
+;Lao People's Democratic Republic;South-eastern Asia;;South-eastern Asia;
+1;Malaysia;South-eastern Asia;;South-eastern Asia;Muslim
+1;Myanmar;South-eastern Asia;;South-eastern Asia;Buddhist
+1;Philippines;South-eastern Asia;;South-eastern Asia;Christian
+1;Singapore;South-eastern Asia;;South-eastern Asia;Buddhist
+1;Thailand;South-eastern Asia;;South-eastern Asia;Buddhist
+;Timor-Leste;South-eastern Asia;;South-eastern Asia;
+1;Vietnam;South-eastern Asia;;South-eastern Asia;Buddhist
+;Botswana;Sub-Saharan Africa;Southern Africa;Southern Africa;
+;Eswatini;Sub-Saharan Africa;Southern Africa;Southern Africa;
+;Lesotho;Sub-Saharan Africa;Southern Africa;Southern Africa;
+1;Namibia;Sub-Saharan Africa;Southern Africa;Southern Africa;Christian
+1;South Africa;Sub-Saharan Africa;Southern Africa;Southern Africa;Christian
+1;Afghanistan;Southern Asia;;Southern Asia;Muslim
+1;Bangladesh;Southern Asia;;Southern Asia;Muslim
+;Bhutan;Southern Asia;;Southern Asia;
+1;India;Southern Asia;;Southern Asia;Hindu
+1;Iran;Asia;Southern Asia;Southern Asia;Muslim
+1;Maldives;Southern Asia;;Southern Asia;Muslim
+1;Nepal;Southern Asia;;Southern Asia;Hindu
+1;Pakistan;Southern Asia;;Southern Asia;Muslim
+1;Sri Lanka;Southern Asia;;Southern Asia;Buddhist
+1;Albania;Southern Europe;;Southern Europe;Muslim
+;Andorra;Southern Europe;;Southern Europe;
+1;Bosnia and Herzegovina;Southern Europe;;Southern Europe;Muslim
+1;Croatia;Southern Europe;;Southern Europe;Christian
+;Gibraltar;Southern Europe;;Southern Europe;
+1;Greece;Southern Europe;;Southern Europe;Christian
+;Holy See;Southern Europe;;Southern Europe;
+1;Italy;Southern Europe;;Southern Europe;Christian
+1;Malta;Southern Europe;;Southern Europe;Christian
+1;Montenegro;Southern Europe;;Southern Europe;Christian
+1;North Macedonia;Southern Europe;;Southern Europe;Christian
+1;Portugal;Southern Europe;;Southern Europe;Christian
+;San Marino;Southern Europe;;Southern Europe;
+1;Serbia;Southern Europe;;Southern Europe;Christian
+1;Slovenia;Southern Europe;;Southern Europe;Christian
+1;Spain;Southern Europe;;Southern Europe;Christian
+;Saint Helena;Africa;Sub-Saharan Africa;Sub-Saharan Africa;
+1;Tanzania;Africa;Sub-Saharan Africa;Sub-Saharan Africa;Christian
+;Benin;Sub-Saharan Africa;Western Africa;Western Africa;
+1;Burkina Faso;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+;Cabo Verde;Sub-Saharan Africa;Western Africa;Western Africa;
+1;Gambia;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+1;Ghana;Sub-Saharan Africa;Western Africa;Western Africa;Christian
+1;Guinea;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+1;Guinea-Bissau;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+;Liberia;Sub-Saharan Africa;Western Africa;Western Africa;
+1;Mali;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+;Mauritania;Sub-Saharan Africa;Western Africa;Western Africa;
+1;Niger;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+1;Nigeria;Sub-Saharan Africa;Western Africa;Western Africa;Christian
+1;Senegal;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+1;Sierra Leone;Sub-Saharan Africa;Western Africa;Western Africa;Muslim
+;Togo;Sub-Saharan Africa;Western Africa;Western Africa;
+1;Armenia;Western Asia;;Western Asia;Christian
+1;Azerbaijan;Western Asia;;Western Asia;Muslim
+1;Bahrain;Western Asia;;Western Asia;Muslim
+1;Cyprus;Western Asia;;Western Asia;Christian
+1;Georgia;Western Asia;;Western Asia;Christian
+1;Iraq;Western Asia;;Western Asia;Muslim
+1;Israel;Western Asia;;Western Asia;Jew
+1;Jordan;Western Asia;;Western Asia;Muslim
+1;Kuwait;Western Asia;;Western Asia;Muslim
+1;Lebanon;Western Asia;;Western Asia;Muslim
+1;Oman;Western Asia;;Western Asia;Muslim
+1;Palestine;Asia;Western Asia;Western Asia;Muslim
+1;Qatar;Western Asia;;Western Asia;Muslim
+1;Saudi Arabia;Western Asia;;Western Asia;Muslim
+1;Syrian Arab Republic;Western Asia;;Western Asia;Muslim
+1;Turkey;Western Asia;;Western Asia;Muslim
+1;United Arab Emirates;Western Asia;;Western Asia;Muslim
+1;Yemen;Western Asia;;Western Asia;Muslim
+1;Austria;Western Europe;;Western Europe;Christian
+1;Belgium;Western Europe;;Western Europe;Christian
+1;France;Western Europe;;Western Europe;Christian
+1;Germany;Western Europe;;Western Europe;Christian
+;Liechtenstein;Western Europe;;Western Europe;
+1;Luxembourg;Western Europe;;Western Europe;Christian
+1;Monaco;Western Europe;;Western Europe;Christian
+1;Netherlands;Europe;Western Europe;Western Europe;Christian
+1;Switzerland;Western Europe;;Western Europe;Christian
+;;;;;
