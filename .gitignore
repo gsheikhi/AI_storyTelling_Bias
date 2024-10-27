@@ -1,1 +1,4 @@
 /venv
+/data/results/*
+/data/processed/*
+data/raw/*
