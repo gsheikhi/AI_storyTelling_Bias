@@ -93,18 +93,22 @@ pip install -r requirements.txt
       - HF_ACCESS_TOKEN for LLaMA
 
 ## Usage
+1. Set up general configurations in:
+```bash
+general_config.json
+```
 
-1. Generate country combinations:
+2. Generate country combinations:
 ```bash
 python scripts/generate_inputs.py
 ```
 
-2. Generate stories:
+3. Generate stories:
 ```bash
-python scripts/generate_response.py --model [model_name] --rounds [num_rounds]
+python scripts/generate_response.py --model
 ```
 
-3. Analyse results:
+4. Analyse results:
 ```bash
 python scripts/analyse_results.py
 ```
