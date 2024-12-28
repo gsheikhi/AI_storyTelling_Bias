@@ -1,0 +1,16 @@
+{
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "max_new_tokens": 500,
+    "do_sample": true,
+    "temperature": 0.9,
+    "top_p": 1,
+    "messages":[
+        {"role": "system", 
+        "content":
+        "You are a professinal short story writer. You should write a crime story using the information below and the instructions. Follow the instructions carefully."
+        },
+        {"role": "user", 
+        "content": ""
+        }
+      ]
+}

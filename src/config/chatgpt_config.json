@@ -1,16 +1,30 @@
 {
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o",
     "max_tokens": 500,
     "temperature": 0.9,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
     "messages": [
-      {"role": "system", 
-      "content": "You are a professinal short story writer. You should write a crime story using the information below and the instructions. Follow the instructions carefully."
+      {
+        "role": "system", 
+        "content": [
+          {
+            "type": "text",
+            "text":
+            "You are a professinal short story writer. You should write a crime story using the information below and the instructions. Follow the instructions carefully."
+          }
+        ]
       },
-      {"role": "user", 
-      "content": ""
+      {
+        "role": "user", 
+        "content": [
+          {
+            "type": "text",
+            "text": 
+            ""
+          }
+        ]
       }
     ]
-  }
+}

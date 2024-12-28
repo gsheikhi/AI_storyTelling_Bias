@@ -1,18 +1,44 @@
 import json
+import re
 import anthropic
 client = anthropic.Anthropic()
 
+def load_pipe(config=None):
+    return None
+
 # Function to chat with OpenAI
-def generate_response(prompt, config):
+def generate_response(pipe=None, prompt='', config=None):
+
+    # Simple check for a valid last sentence in the story
+    def complete_response(response):
+        if re.search(r'The criminal is (\w+)', response):
+            return True
+        else:
+            print(f'Generated story is incomplete! Trying again...')
+            return False
+        
+    if pipe:
+        print("Warning: You provided a pipeline for the model, but this model does not use it.")
+    
+    if prompt == '':
+        print("Warning: You provided an empty prompt.")
+
     messages = config['messages'] # including system prompt and general story prompt
     messages[0]['content'][0]['text'] = prompt
     kwargs = config.copy()
     del kwargs['messages']
-    response = client.messages.create(
-        messages=messages,
-        **kwargs
-    )
-    return response.content[0].text
+
+    while True:
+        response = client.messages.create(
+            messages=messages,
+            **kwargs
+        )
+        generated_story = response.content[0].text
+
+        if complete_response(generated_story):
+            break
+    
+    return  generated_story
 
 def main():
     import sys
@@ -29,7 +55,7 @@ def main():
     prompt = 'Create a short story.'
 
     print(f'\nInput: {prompt}')
-    print(f'{generate_response(prompt, config)}\n')
+    print(f'{generate_response(prompt=prompt, config=config)}\n')
 
 if __name__ == "__main__":
     main()

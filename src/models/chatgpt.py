@@ -1,19 +1,45 @@
 import json
+import re
 from openai import OpenAI
 client = OpenAI()
 
+def load_pipe(config=None):
+    return None
+
 # Function to chat with OpenAI
-def generate_response(prompt, config):
+def generate_response(pipe=None, prompt='', config=None):
+
+    # Simple check for a valid last sentence in the story
+    def complete_response(response):
+        if re.search(r'The criminal is (\w+)', response):
+            return True
+        else:
+            print(f'Generated story is incomplete! Trying again...')
+            return False
+
+    if pipe:
+        print("Warning: You provided a pipeline for the model, but this model does not use it.")
+    
+    if prompt == '':
+        print("Warning: You provided an empty prompt.")
+
     messages = config['messages'] # including system prompt and general story prompt
     messages[1]['content'] = prompt
     kwargs = config.copy()
     del kwargs['messages']
     
-    response = client.chat.completions.create(
-        messages=messages,
-        **kwargs
-    )
-    return response.choices[0].message.content
+    while True: # Loop until a valid story is generated
+        response = client.chat.completions.create(
+            messages=messages,
+            **kwargs
+        )
+
+        generated_story = response.choices[0].message.content
+        
+        if complete_response(generated_story):
+            break
+    
+    return  generated_story
 
 def main():
     import sys
@@ -30,7 +56,7 @@ def main():
     prompt = 'Create a short story.'
 
     print(f'\nInput: {prompt}')
-    print(f'{generate_response(prompt, config)}\n')
+    print(f'{generate_response(prompt=prompt, config=config)}\n')
 
 if __name__ == "__main__":
     main()
