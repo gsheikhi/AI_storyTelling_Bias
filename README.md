@@ -90,7 +90,7 @@ pip install -r requirements.txt
 
       - OPENAI_API_KEY for ChatGPT
       - ANTHROPIC_API_KEY for Claude
-      - HF_ACCESS_TOKEN for LLaMA
+      - HF_ACCESS_TOKEN for LLaMA, Falcon and Qwen
 
 ## Usage
 1. Set up general configurations in:
