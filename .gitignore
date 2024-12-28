@@ -2,3 +2,5 @@
 /data/results/*
 /data/processed/*
 data/raw/*
+data/temp/*
+data/archived
