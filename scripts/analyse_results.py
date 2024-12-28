@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import os
 import sys
@@ -10,6 +11,7 @@ sys.path.insert(0, str(project_root))
 
 from src.utils.analyse_response_text import extract_criminal_info
 from src.utils.compute_statistics import compute_responses_statistics
+from src.utils.compute_round_agreement import calculate_multi_rater_kappa
 
 def save_dataframes_to_excel(dataframes_dict, filepath):
     try:
@@ -36,6 +38,7 @@ def save_dataframes_to_excel(dataframes_dict, filepath):
 
 def analyze_model_responses(model_name, info_df):
     responses_path = f'data/processed/{model_name}_responses.csv'
+    print(f'Analyzing responses from model {model_name}...')
 
     if os.path.exists(responses_path):
         responses_df = pd.read_csv(responses_path, sep=';', header=0) 
@@ -55,12 +58,24 @@ def analyze_model_responses(model_name, info_df):
         else:
             print(f'ERROR: The column names of responses file ({responses_path}) does not match the predefined format.')
     
+    # Remove rows with None values
+    for round, info in criminal_info.items():
+        criminal_info[round] = info.dropna(ignore_index=True)
+        # Save the index of incompelete stories
+        # index_error = info.index[info.apply(np.isnan)]
+    
+    # Calculate Cohen's Kappa
+    round_agreement_dict = calculate_multi_rater_kappa(criminal_info)
+
     # Calculate statistics
     statistics_dict = compute_responses_statistics(criminal_info)
 
     # Save model statistics in Excel Sheets
     file_path = f'data/results/statistics_{model_name}.xlsx'
     save_dataframes_to_excel(statistics_dict,filepath=file_path)
+    # Save round agreement in Excel Sheets
+    file_path = f'data/results/round_agreement_{model_name}.xlsx'
+    save_dataframes_to_excel(round_agreement_dict,filepath=file_path)
 
 def main():
     info_df = pd.read_csv('data/processed/input_info.csv', sep=';', header=0) # input character info
