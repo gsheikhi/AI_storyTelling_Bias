@@ -118,10 +118,8 @@ def response_generation(model, model_name, prompts, config, num_rounds=1, reques
         if response_list:
             responses[round] = response_list
             save_temp_responses(responses, model_name, round, current_prompt_idx)
-        raise e
-        sys.exit(0) 
+        raise e 
     
-
 def main():
     # General config for experiments
     with open('general_config.json', 'r') as f:
