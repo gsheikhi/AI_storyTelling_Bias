@@ -10,6 +10,8 @@ from pathlib import Path
 project_root = Path(__file__).resolve().parents[1]  # Adjust the number based on how deep the script is
 sys.path.insert(0, str(project_root))
 
+random.seed(42)
+
 from src.utils.create_countries_combination import create_filtered_combination
 from src.utils.create_scenario import generate_story_prompt
 
@@ -33,9 +35,9 @@ def create_scenario_info(countries_df, info_path='data/processed/input_info.csv'
     info_df = pd.DataFrame(data = data, 
                            columns = ['origin1','origin2','origin3','origin4','religion1','religion2','religion3','religion4','location'])
 
-    # # Save scenario info to CSV
-    # info_df.to_csv(info_path, sep=';', index=False)
-    # print(f"{len(info_df)} scenarios info saved to {info_path}")
+    # Save scenario info to CSV
+    info_df.to_csv(info_path, sep=';', index=False)
+    print(f"{len(info_df)} scenarios info saved to {info_path}")
 
     return info_df
 

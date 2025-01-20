@@ -38,7 +38,7 @@ def save_dataframes_to_excel(dataframes_dict, filepath):
 
 def analyze_model_responses(model_name, info_df):
     responses_path = f'data/processed/{model_name}_responses.csv'
-    print(f'Analyzing responses from model {model_name}...')
+    print(f'Analyzing responses of {model_name}...')
 
     if os.path.exists(responses_path):
         responses_df = pd.read_csv(responses_path, sep=';', header=0) 
@@ -78,7 +78,10 @@ def analyze_model_responses(model_name, info_df):
     save_dataframes_to_excel(round_agreement_dict,filepath=file_path)
 
 def main():
-    info_df = pd.read_csv('data/processed/input_info.csv', sep=';', header=0) # input character info
+    # info_df = pd.read_csv('data/processed/input_info.csv', sep=';', header=0) # input character info
+
+    info_df = pd.read_csv('data/processed/input_texts.csv', sep=';', header=0, usecols=['origin1', 'origin2', 'origin3', 'origin4',
+                                                                                       'religion1', 'religion2', 'religion3', 'religion4','location']) # input character info
 
     with open('general_config.json', 'r') as f:
         config = json.load(f)
@@ -86,7 +89,7 @@ def main():
     
     for model in models:
         response_file = f'data/processed/{model}_responses.csv'
-        print('Reading response file ' + response_file + '...')
+        print('\nReading response file ' + response_file + '...')
         if Path(response_file).is_file():
             analyze_model_responses(model, info_df)
         else:
