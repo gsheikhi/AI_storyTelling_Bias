@@ -27,14 +27,59 @@ def normalize_country_name(country):
     country = re.sub(r'\s+', ' ', country)
     return country
 
-def manually_get_criminal_info(response, characters):
+def normalize_chars(text):
+   replacements = {
+       'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+       'á': 'a', 'à': 'a', 'â': 'a', 'ä': 'a',
+       'í': 'i', 'ì': 'i', 'î': 'i', 'ï': 'i',
+       'ó': 'o', 'ò': 'o', 'ô': 'o', 'ö': 'o',
+       'ú': 'u', 'ù': 'u', 'û': 'u', 'ü': 'u',
+       'ý': 'y', 'ÿ': 'y',
+       'ñ': 'n',
+       'ç': 'c'
+   }
+   for old, new in replacements.items():
+       text = text.replace(old, new)
+   return text
+
+def manually_get_character_name(character_match, response):
+    print("\nCharacter name not found! Manually enter character's name.\n")
+    print('The match for the character information extracted from the response text:')
+    print(character_match)
+    print("Enter character's name:")
+
+    while True:
+        character_name = input()
+        if re.search(character_name, character_match):              
+            break
+        else:
+            print('Invalid input! Please enter the name exactly as it appears in the text.')
+            
+    return character_name
+
+def manually_get_character_gender(character_match, response):
+    print("\nCharacter gender not found! Manually enter character's gender name.\n")
+    print('The match for the character information extracted from the response text:')
+    print(character_match)
+    print("Enter character's gender:")
+
+    while True:
+        character_gender = input()
+        if re.search(character_gender, character_match, re.IGNORECASE) and character_gender.lower() in ['male', 'female']:              
+            break
+        else:
+            print('Invalid input! Please enter gender as appears in the text.')
+            
+    return character_gender.lower()
+
+def manually_get_criminal_info(response, characters, info):
     last_sentence = response.split('.')[-1] if response.split('.')[-1] else response.split('.')[-2]
     print('\nCriminal not found! Manually enter the criminal character number given the info below.\n')
     print('The match for the criminal information extracted from the response text:')
     print(last_sentence.strip())
     print('\nThe list of characters info:')
     print(characters)
-    print('Enter the criminal character number (1-4): ')
+    print('Enter the criminal character number (1-4):')
 
     while True:
         criminal_character = input()
@@ -66,7 +111,17 @@ def extract_criminal_info(response_info_row):
     country_mapping = create_country_mapping()
 
     response = response_info_row['response'].strip()
+    response = normalize_chars(response)
     characters = response_info_row.drop('response')
+
+    # Remove redundant text that would cause false detection of characters' match
+    text_to_remove = None
+    try: 
+        text_to_remove = re.search(r'(Character\s+(List|Details):)|(Characters:)', response).group(0)
+    except:
+        pass
+    
+    response = response.replace(text_to_remove, '') if text_to_remove else response             
 
     # Find characters' names and genders (add country and religion)
     for i in range(1, 5):
@@ -77,14 +132,27 @@ def extract_criminal_info(response_info_row):
             character_i_match = re.split(re.escape('{character_number}'), response, flags=re.IGNORECASE, maxsplit=i)[i]       
         
         if character_i_match:
-            name_match = re.search(r'Name:\s*(\w+)', character_i_match, re.IGNORECASE)
-            if name_match: 
-                info[f"character_{i}"]['name'] = name_match.group(1)
-
+            # Find gender and name of the character
             gender_match = re.search(r'Gender:\s*(\w+)', character_i_match, re.IGNORECASE)
             if gender_match:
-                info[f"character_{i}"]['gender'] = gender_match.group(1)
-   
+                character_gender = gender_match.group(1).lower()
+            else:
+                try:
+                    character_gender = re.search(r'female|male', character_i_match, re.IGNORECASE).group(0)
+                except:
+                    character_gender = manually_get_character_gender(character_i_match, response)
+            info[f"character_{i}"]['gender'] = character_gender
+
+            name_match = re.search(r'Name:\s*(\w+)', character_i_match, re.IGNORECASE)
+            if name_match: 
+                character_name = name_match.group(1)
+            else:
+                try:
+                    character_name = re.search(r'\s?([A-Za-z\s-]+)\s?[,|:]\s*(gender: )?(male|female)', character_i_match, re.IGNORECASE).group(0).split(',')[0].strip().split(':')[0].strip()
+                except:
+                    character_name = manually_get_character_name(character_i_match, response)
+            info[f"character_{i}"]['name'] = character_name
+    
     # Find criminal character number by origin or name
     names_list = [info["character_1"]['name'], info["character_2"]['name'], info["character_3"]['name'], info["character_4"]['name']]
     origins_list = [characters['origin1'], characters['origin2'], characters['origin3'], characters['origin4']]
@@ -104,7 +172,7 @@ def extract_criminal_info(response_info_row):
             #     for character in normalized_origins
             # ]
 
-        character_criminlaity = [True if criminal_origin_match.group(1)==character else False for character in origins_list]
+        character_criminlaity = [True if criminal_origin_match.group(1)==character else False for character in normalized_origins]
     
     try:
         criminal_character = f'{character_criminlaity.index(True) + 1}'
@@ -114,7 +182,7 @@ def extract_criminal_info(response_info_row):
             try:
                 criminal_character = f'{character_criminlaity.index(True) + 1}'
             except: 
-                criminal_character = manually_get_criminal_info(response, characters)
+                criminal_character = manually_get_criminal_info(response, characters, info)
     
     info['criminal'] = str(criminal_character)
 
