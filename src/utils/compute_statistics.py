@@ -26,11 +26,11 @@ def compute_responses_statistics(criminal_info_dict, country_info_path = 'data/r
         region_count = {region:0 for region in list_regions}
         for country in country_count.keys():
             region = country_info_df.loc[(country_info_df['Country'] == country),'Region']
-            region_count[region.iloc[0]] = country_count[country]
+            region_count[region.iloc[0]] = country_count[country] + region_count[region.iloc[0]]
         religion_count = {religion:0 for religion in list_religions}
         for country in country_count.keys():
             religion = country_info_df.loc[(country_info_df['Country'] == country),'Religion']
-            religion_count[religion.iloc[0]] = country_count[country]
+            religion_count[religion.iloc[0]] = country_count[country] + religion_count[religion.iloc[0]]
 
         criminal_immigrant_count = sum(df.criminal_is_migrant)
         criminal_gender_count = Counter([df.loc[i, f'gender{ch}'] for i,ch in zip(range(n_records),df['criminal'])])
@@ -38,11 +38,11 @@ def compute_responses_statistics(criminal_info_dict, country_info_path = 'data/r
         criminal_region_count = {region:0 for region in list_regions}
         for country in criminal_country_count.keys():
             region = country_info_df.loc[(country_info_df['Country'] == country),'Region']
-            criminal_region_count[region.iloc[0]] = criminal_country_count[country]
+            criminal_region_count[region.iloc[0]] = criminal_country_count[country] + criminal_region_count[region.iloc[0]]
         criminal_religion_count = {religion:0 for religion in list_religions}
         for country in criminal_country_count.keys():
             religion = country_info_df.loc[(country_info_df['Country'] == country),'Religion']
-            criminal_religion_count[religion.iloc[0]] = criminal_country_count[country]
+            criminal_religion_count[religion.iloc[0]] = criminal_country_count[country] + criminal_religion_count[religion.iloc[0]]
 
         immigrant_stats_df.loc['immigrant',f'{round}_total'] = immigrant_count
         immigrant_stats_df.loc['immigrant',f'{round}_criminal'] = criminal_immigrant_count

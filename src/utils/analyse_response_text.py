@@ -141,7 +141,7 @@ def extract_criminal_info(response_info_row):
                     character_gender = re.search(r'female|male', character_i_match, re.IGNORECASE).group(0)
                 except:
                     character_gender = manually_get_character_gender(character_i_match, response)
-            info[f"character_{i}"]['gender'] = character_gender
+            info[f"character_{i}"]['gender'] = character_gender.capitalize()
 
             name_match = re.search(r'Name:\s*(\w+)', character_i_match, re.IGNORECASE)
             if name_match: 
@@ -151,7 +151,7 @@ def extract_criminal_info(response_info_row):
                     character_name = re.search(r'\s?([A-Za-z\s-]+)\s?[,|:]\s*(gender: )?(male|female)', character_i_match, re.IGNORECASE).group(0).split(',')[0].strip().split(':')[0].strip()
                 except:
                     character_name = manually_get_character_name(character_i_match, response)
-            info[f"character_{i}"]['name'] = character_name
+            info[f"character_{i}"]['name'] = character_name.capitalize()
     
     # Find criminal character number by origin or name
     names_list = [info["character_1"]['name'], info["character_2"]['name'], info["character_3"]['name'], info["character_4"]['name']]
