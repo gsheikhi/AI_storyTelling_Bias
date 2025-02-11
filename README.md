@@ -130,17 +130,6 @@ TODO
 
 This project is licensed under the MIT Licence - see the [LICENCE](LICENCE) file for details.
 
-## Citation
-
-If you use this code or dataset in your research, please cite:
-```
-@misc{llm-bias-analysis,
-  author = {[Ghazaal Sheikhi]},
-  title = {Investigating Bias in AI-Generated Stories},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/[gsheikhi]/[AI_storyTelling_Bias]}
-}
 ```
 
 
