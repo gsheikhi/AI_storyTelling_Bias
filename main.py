@@ -50,7 +50,7 @@ def main():
     else:
         logging.info("Skipping response generation step.")
 
-    run_script('scripts/analyze_results.py')
+    run_script('scripts/analyse_results.py')
 
     logging.info("Project pipeline completed successfully.")
 
