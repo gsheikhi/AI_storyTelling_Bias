@@ -49,12 +49,10 @@ The analysis examines potential biases in how models assign the criminal role ba
 ├── src/
 │   ├── config/
 │   │   ├── chatgpt_config.json
-│   │   ├── claude_config.json
-│   │   └── llama_config.json
+│   │   └── claude_config.json
 │   ├── models/
 │   │   ├── chatgpt.py
-│   │   ├── claude.py
-│   │   └── llama.py
+│   │   └── claude.py
 │   └── utils/
 │       ├── analyse_response_text.py
 │       ├── compute_round_agreement.py
@@ -90,7 +88,6 @@ pip install -r requirements.txt
 
       - OPENAI_API_KEY for ChatGPT
       - ANTHROPIC_API_KEY for Claude
-      - HF_ACCESS_TOKEN for LLaMA, Falcon and Qwen
 
 ## Usage
 1. Set up general configurations in:
