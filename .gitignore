@@ -1,5 +1,6 @@
 /venv
 /data/results/*
+!/data/results/charactersANDcriminal_info/
 /data/processed/*
 data/raw/*
 data/temp/*
