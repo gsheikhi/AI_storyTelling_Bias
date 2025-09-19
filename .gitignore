@@ -4,3 +4,26 @@
 data/raw/*
 data/temp/*
 data/archived
+ploting 
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Other common files
+.env
+.env.local
