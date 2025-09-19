@@ -21,7 +21,7 @@ def read_general_config(config_file='general_config.json'):
     return config
 
 def create_scenario_info(countries_df, info_path='data/processed/input_info.csv'):
-        # Create combinations with different regions and religions
+    # Create combinations with different regions and religions
     countries_combs = create_filtered_combination(countries_df)
 
     # Test the frequency of the countries in the set
