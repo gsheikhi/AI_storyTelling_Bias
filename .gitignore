@@ -1,12 +1,12 @@
 /venv
 /data/results/*
 !/data/results/charactersANDcriminal_info/
+!/data/results/lexical_analysis/
 /data/processed/*
 data/raw/*
 data/temp/*
 data/archived
 ploting 
-
 # macOS system files
 .DS_Store
 .DS_Store?
